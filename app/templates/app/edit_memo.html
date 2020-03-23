@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-<div>
+{% extends 'app/base.html' %}
+{% block content %}
 <a href="{% url 'app:detail' memo.id %}">戻る</a>
 </div>
 
@@ -22,6 +16,5 @@
   </table>
   <button class="btn" type="submit">保存</button>
 </form>
-</body>
-</html>
+{% endblock %}
 

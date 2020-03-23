@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>detail</h1>
+{% extends 'app/base.html' %}
+{% block content %}
     <div>
         <a href="{% url 'app:index' %}">home</a>
     </div>
@@ -21,5 +15,4 @@
         {% csrf_token %}
         <button class="btn" type="submit" onclick='return confirm("本当に削除しますか");'>削除</button>
     </form>
-</body>
-</html>
+{% endblock %}
