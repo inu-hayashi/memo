@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>top</h1>
+    <a href="{% url 'app:new_memo' %}" class="btn">新規メモ作成</a>
+    {% for memo in memos %}
+        <a href="{% url 'app:detail' memo.id %}" class="memo-title">
+        <div>
+            {{ memo }}
+            <span class="updated_datetime">{{ memo.updated_datetime }}</span>
+        </div>
+    </a>
+    {% endfor %}
+</body>
+</html>

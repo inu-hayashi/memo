@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>detail</h1>
+    <div>
+        <a href="{% url 'app:index' %}">home</a>
+    </div>
+
+    <h2>{{ memo.title }}</h2>
+    <div>
+        {{ memo.text |linebreaks | urlize }}
+    </div>
+</body>
+</html>
