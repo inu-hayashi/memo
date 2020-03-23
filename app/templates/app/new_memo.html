@@ -8,5 +8,10 @@
     <div>
         <a href="{% url 'app:index' %}">home</a>
     </div>
+
+    <form action="{% url 'app:new_memo' %}" method="POST">
+        {% csrf_token %}{{ form.as_p }}
+        <button type="submit" class="btn">save</button>
+    </form>
 </body>
 </html>

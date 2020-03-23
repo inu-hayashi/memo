@@ -10,7 +10,7 @@
     {% for memo in memos %}
         <a href="{% url 'app:detail' memo.id %}" class="memo-title">
         <div>
-            {{ memo }}
+            {{ memo.title }}
             <span class="updated_datetime">{{ memo.updated_datetime }}</span>
         </div>
     </a>
