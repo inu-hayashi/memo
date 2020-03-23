@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="{% url 'app:detail' memo.id %}">back</a>
+    </div>
+
+    <form action="{% url 'app:edit_memo' memo.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">save</button>
+    </form>
+</body>
+</html>

@@ -14,6 +14,9 @@
     <div>
         {{ memo.text |linebreaks | urlize }}
     </div>
+    <button>
+        <a href="{% url 'app:edit_memo' memo.pk %}" class="btn">edit</a>
+    </button>
     <form method="post" action="{% url 'app:delete_memo' memo.pk %}">
         {% csrf_token %}
         <button class="btn" type="submit" onclick='return confirm("本当に削除しますか");'>削除</button>
