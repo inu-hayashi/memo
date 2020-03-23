@@ -10,7 +10,11 @@
     </div>
 
     <form action="{% url 'app:new_memo' %}" method="POST">
-        {% csrf_token %}{{ form.as_p }}
+        {% csrf_token %}
+        <p>タイトル</p>
+        {{ form.title }}
+        <p>テキスト</p>
+        {{ form.text }}
         <button type="submit" class="btn">save</button>
     </form>
 </body>
